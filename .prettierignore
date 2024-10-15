@@ -1,0 +1,16 @@
+**/.git
+**/.svn
+**/.hg
+**/node_modules
+**/package.json
+**/package-lock.json
+build
+dist
+node_modules
+.github
+*.json
+.prettierrc
+README.md
+next-env.d.ts
+next.config.js
+

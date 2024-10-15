@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    gap: 32px;
+
+    &_email {
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-left: 16px;
+    }
+}

@@ -1,0 +1,21 @@
+.container {
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: $shadow;
+    padding: 10px;
+    margin-left: 16px;
+    margin-bottom: 16px;
+    background-color: $background-color-container;
+
+    &_form {
+        @include flex-center;
+
+        gap: 10px;
+    }
+
+    &_list {
+        @include flex-center;
+
+        gap: 8px;
+    }
+}

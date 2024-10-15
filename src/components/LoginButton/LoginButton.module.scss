@@ -1,0 +1,40 @@
+.btn_login {
+    border-radius: 10px;
+    width: 64px;
+    height: 64px;
+    box-shadow: $shadow;
+    background-color: $color-green;
+    transition:
+        background-color $transition,
+        box-shadow $transition;
+
+    &:hover {
+        box-shadow: $shadow-hover;
+        background-color: $color-green-hover;
+    }
+}
+
+.btn_logout {
+    border-radius: 10px;
+    width: 64px;
+    height: 64px;
+    box-shadow: $shadow;
+    background-color: $color-red;
+    transition:
+        background-color $transition,
+        box-shadow $transition;
+
+    &:hover {
+        box-shadow: $shadow-hover;
+        background-color: $color-red-hover;
+    }
+}
+
+.loader {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 300px;
+}

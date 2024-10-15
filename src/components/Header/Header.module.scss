@@ -1,0 +1,31 @@
+.container_nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 16px;
+}
+
+.link {
+    @include flex-center;
+
+    border-radius: 10px;
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    box-shadow: $shadow;
+    transition: box-shadow $transition;
+}
+
+.link:hover {
+    box-shadow: $shadow-hover;
+}
+
+.link:active {
+    box-shadow: $shadow-active;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}

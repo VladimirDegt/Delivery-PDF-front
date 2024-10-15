@@ -1,0 +1,61 @@
+{
+  "name": "next-ts-boilerplate",
+  "version": "0.0.1",
+  "author": "degtyarevvladimirr@gmail.com",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "npx eslint . --report-unused-disable-directives --max-warnings 5 && stylelint **/*.module.scss --max-warnings 0",
+    "lint:fix": "eslint . --fix && stylelint **/*.module.scss --fix",
+    "prettier": "prettier . --check --ignore-unknown",
+    "prettier:fix": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css,scss,module.css,html}'",
+    "playwright": "npx playwright test",
+    "playwright-ui": "npx playwright test --ui"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@fontsource/roboto": "^5.1.0",
+    "@hookform/resolvers": "^3.9.0",
+    "@mui/icons-material": "^6.1.0",
+    "@mui/material": "^6.1.0",
+    "@mui/x-date-pickers": "^7.18.0",
+    "@reduxjs/toolkit": "^2.2.7",
+    "dayjs": "^1.11.13",
+    "next": "14.2.7",
+    "next-intl": "^3.20.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-hook-form": "^7.53.0",
+    "react-redux": "^9.1.2",
+    "react-spinners": "^0.14.1",
+    "react-toastify": "^10.0.5",
+    "redux-persist": "^6.0.0",
+    "yup": "^1.4.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.46.1",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^9.9.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react": "^7.35.0",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.11",
+    "prettier": "3.3.3",
+    "sass": "^1.77.8",
+    "stylelint": "^16.9.0",
+    "stylelint-config-standard": "^36.0.1",
+    "stylelint-scss": "^6.5.1",
+    "typescript": "^5",
+    "typescript-eslint": "^8.3.0"
+  },
+  "overrides": {
+    "eslint": "^9.9.1"
+  }
+}

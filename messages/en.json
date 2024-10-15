@@ -1,0 +1,60 @@
+{
+  "HomePage": {
+    "title": "Send file PDF to email"
+  },
+  "ReportPage": {
+    "title": "Information about sent documents"
+  },
+  "Header": {
+    "language": "Eng",
+    "login": "Login",
+    "logout": "Logout",
+    "redirect_home": "Home",
+    "redirect_report": "Report"
+  },
+  "DragAndDrop": {
+    "title": "Drag your file(s) here or upload from your device",
+    "description": "(only files with .pdf extension)",
+    "drop": "Release the file to upload",
+    "btn_submit": "Send files",
+    "EXTENSION_MESSAGE_ERROR": "Invalid format of one of the files",
+    "SIZE_MESSAGE_ERROR": "The size of one of the files exceeds 5Mb",
+    "CHOOSE_FILE_MESSAGE_ERROR": "Select files",
+    "SIGN_IN_MESSAGE_ERROR": "Please register",
+    "DELIVERY_SUCCESS": "Submission of the documents is completed",
+    "DELIVERY_WRONG": "An error occurred while sending the files"
+  },
+  "BlockChooseEmailTo": {
+    "title": "Select the email to send files to",
+    "placeholder": "Enter the email",
+    "email_in_document": "The email is specified in the document details",
+    "custom_email": "Provide the desired email"
+  },
+  "BlockChooseActs": {
+    "title": "List of documents to be sent",
+    "list_is_empty": "The list is empty",
+    "btn": "Clear the list"
+  },
+  "Footer": {
+    "copyright": "Copyright © 2024 Created by Volodymyr Dehtiarev"
+  },
+  "ReportDelivery": {
+    "date": "Date",
+    "sender": "Sender",
+    "file_name": "File name",
+    "email_sender": "Email sender",
+    "result_delivery": "Result delivery",
+    "message_registry": "Please register"
+  },
+  "RangeDateForm": {
+    "title": "Select dates for the search",
+    "start": "Start",
+    "end": "End",
+    "message_choose_date": "Select dates"
+  },
+  "documentSlice": {
+    "NO_DOCUMENT_CURRENT_DATE": "No documents were sent today. Select a date",
+    "NO_DOCUMENT_FIND": "Documents are not find. Try another date",
+    "THERE_IS_DOCUMENT": ""
+  }
+}

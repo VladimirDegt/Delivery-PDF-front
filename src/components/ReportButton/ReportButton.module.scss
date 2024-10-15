@@ -1,0 +1,18 @@
+.btn {
+    @include flex-center-column;
+
+    border-radius: 10px;
+    min-width: 122px;
+    padding: 8px;
+    color: $color-white;
+    box-shadow: $shadow;
+    background-color: $color-green;
+    transition:
+        background-color $transition,
+        box-shadow $transition;
+
+    &:hover {
+        box-shadow: $shadow-hover;
+        background-color: $color-green-hover;
+    }
+}

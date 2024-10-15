@@ -1,0 +1,60 @@
+{
+  "HomePage": {
+    "title": "Відправка PDF на email"
+  },
+  "ReportPage": {
+    "title": "Інформація про відправлені документи"
+  },
+  "Header": {
+    "language": "Укр",
+    "login": "Вхід",
+    "logout": "Вихід",
+    "redirect_home": "На головну",
+    "redirect_report": "Звіт"
+  },
+  "DragAndDrop": {
+    "title": "Перетягніть сюди файл(-ли) або завантажте зі свого носія",
+    "description": "(тільки файли з розширенням .pdf)",
+    "drop": "Відпустити файл для завантаження",
+    "btn_submit": "Відправити файли",
+    "EXTENSION_MESSAGE_ERROR": "Невірний формат одного з файлів",
+    "SIZE_MESSAGE_ERROR": "Розмір одного з файлів більше 5Mb",
+    "CHOOSE_FILE_MESSAGE_ERROR": "Виберить файли",
+    "SIGN_IN_MESSAGE_ERROR": "Будь ласка, зареєструйтеся",
+    "DELIVERY_SUCCESS": "Відправку актів завершено",
+    "DELIVERY_WRONG": "Сталася помилка під час відправлення файлів"
+  },
+  "BlockChooseEmailTo": {
+    "title": "Вибрати на яку пошту відправляти файли",
+    "placeholder": "Введіть пошту",
+    "email_in_document": "Пошту вказано у реквізитах документа",
+    "custom_email": "Вказати бажану пошту"
+  },
+  "BlockChooseActs": {
+    "title": "Список документів, які будуть відправлятися",
+    "list_is_empty": "Список порожній",
+    "btn": "Очистити список"
+  },
+  "Footer": {
+    "copyright": "Copyright © 2024 розробник Володимир Дегтярев"
+  },
+  "ReportDelivery": {
+    "date": "Дата",
+    "sender": "Відправник",
+    "file_name": "Назва файлу",
+    "email_sender": "Пошта користувача",
+    "result_delivery": "Результат відправки",
+    "message_registry": "Будь ласка, зареєструйтеся"
+  },
+  "RangeDateForm": {
+    "title": "Виберіть дати для пошуку",
+    "start": "Початок",
+    "end": "Кінець",
+    "message_choose_date": "Виберіть дати"
+  },
+  "documentSlice": {
+    "NO_DOCUMENT_CURRENT_DATE": "Сьогодні документи не відправлялися. Виберіть дату",
+    "NO_DOCUMENT_FIND": "Документів не знідено. Спробуйте іншу дату",
+    "THERE_IS_DOCUMENT": ""
+  }
+}
