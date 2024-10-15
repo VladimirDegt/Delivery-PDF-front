@@ -9,7 +9,7 @@ test.describe('Home page', () => {
 
     test('WhenHomePageLoaded_AllBlocksAreVisible_AndURLIsCorrect', async ({ page }) => {
         expect(page.url()).toMatch(ROUTES.HOME);
-        await expect(page).toHaveTitle('SendMyPDF');
+        await expect(page).toHaveTitle('DeliveryPDF');
         const header = page.getByTestId('header');
         await expect(header).toBeVisible();
         const main = page.getByTestId('mainHomePage');

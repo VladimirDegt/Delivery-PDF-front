@@ -18,6 +18,15 @@ test.describe('Header', () => {
         await expect(bntLogin).toBeVisible();
     });
 
+    test('WhenClickOnBtnLogo_RedirectToAnotherSite', async ({ page, context }) => {
+        const [newPage] = await Promise.all([
+            context.waitForEvent('page'),
+            page.getByTestId('logo').click()
+        ]);
+        await newPage.waitForLoadState();
+        await expect(newPage).toHaveURL('https://citynet.kharkiv.ua/');
+    });
+
     test('WhenClickOnBtnReport_RedirectToReportPage', async ({ page }) => {
         const bntReport = page.getByTestId('bntReport');
         await bntReport.click();
