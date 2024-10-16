@@ -1,0 +1,10 @@
+.container {
+  @include flex-left-column;
+
+  min-width: 400px;
+  border-radius: 10px;
+  box-shadow: $shadow;
+  padding: 10px;
+  gap: 5px;
+  background-color: $background-color-container;
+}

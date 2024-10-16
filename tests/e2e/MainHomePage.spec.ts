@@ -10,6 +10,8 @@ test.describe('Main section', () => {
     test('WhenHomePageLoaded_AllComponentsMainAreVisible', async ({ page }) => {
         const formChooseEmailTo = page.getByTestId('formChooseEmailTo');
         await expect(formChooseEmailTo).toBeVisible();
+        const formTextEmail = page.getByTestId('formTextEmail');
+        await expect(formTextEmail).toBeVisible();
         const blockChooseActs = page.getByTestId('blockChooseActs');
         await expect(blockChooseActs).toBeVisible();
         const dragAndDrop = page.getByTestId('dragAndDrop');

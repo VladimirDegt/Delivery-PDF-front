@@ -18,10 +18,9 @@ import { chooseActsReducer } from '@/store/features/chooseActsSlice';
 import { documentReducer } from '@/store/features/documentSlice';
 import { chooseEmailToReducer } from '@/store/features/chooseEmailToSlice';
 import { rtkQueryCatchError } from '@/utils/rtkQueryCatchError';
-import { textEmailReducer } from '@/store/features/textEmailSlice';
 
 const profilePersistConfig = {
-    key: 'DeliveryPDF_profile',
+    key: 'SendMyPDF_profile',
     storage,
     whitelist: ['token']
 };
@@ -29,7 +28,6 @@ const profilePersistConfig = {
 const rootReducer = combineReducers({
     profile: persistReducer(profilePersistConfig, profileReducer),
     chooseEmailTo: chooseEmailToReducer,
-    textEmail: textEmailReducer,
     chooseActs: chooseActsReducer,
     document: documentReducer,
     [profileApi.reducerPath]: profileApi.reducer,

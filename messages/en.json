@@ -30,6 +30,14 @@
     "email_in_document": "The email is specified in the document details",
     "custom_email": "Provide the desired email"
   },
+  "BlockTextEmail": {
+    "title": "Text message",
+    "placeholder": "Enter the text",
+    "btn_submit": "Save",
+    "required": "This field is required",
+    "maxLengthError": "The maximum number of characters is {max}",
+    "btn_clear": "Clear"
+  },
   "BlockChooseActs": {
     "title": "List of documents to be sent",
     "list_is_empty": "The list is empty",
