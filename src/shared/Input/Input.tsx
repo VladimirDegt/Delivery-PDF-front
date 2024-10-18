@@ -2,7 +2,6 @@ import { FieldError, FieldErrorsImpl, Merge, UseFormRegister } from 'react-hook-
 import { Box, Typography } from '@mui/material';
 
 import cls from './Input.module.scss';
-import { LoginFormType } from '@/components/LoginForm/LoginForm';
 import { useTranslations } from 'use-intl';
 
 export type InputType = {
@@ -11,7 +10,8 @@ export type InputType = {
     label: string;
     placeholder: string;
     error: Merge<FieldError, FieldErrorsImpl<{ name: string }>> | undefined;
-    register: UseFormRegister<LoginFormType>;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    register: UseFormRegister<any>;
 };
 
 export const Input = (props: InputType) => {

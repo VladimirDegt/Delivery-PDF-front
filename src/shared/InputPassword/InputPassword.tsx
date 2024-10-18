@@ -3,17 +3,17 @@ import { Box, IconButton, Typography } from '@mui/material';
 import { useState } from 'react';
 
 import cls from './InputPassword.module.scss';
-import { LoginFormType } from '@/components/LoginForm/LoginForm';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import { useTranslations } from 'use-intl';
 
 export type InputPasswordType = {
-    name: 'email' | 'password';
+    name: 'email' | 'password' | 'username';
     label: string;
     placeholder: string;
     error: Merge<FieldError, FieldErrorsImpl<{ name: string }>> | undefined;
-    register: UseFormRegister<LoginFormType>;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    register: UseFormRegister<any>;
 };
 
 export const InputPassword = (props: InputPasswordType) => {

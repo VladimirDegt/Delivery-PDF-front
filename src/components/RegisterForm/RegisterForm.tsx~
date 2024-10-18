@@ -13,6 +13,7 @@ import { ValidateRegisterForm } from '@/components/RegisterForm/ValidateRegister
 import { useRegisterMutation } from '@/store/services/profile';
 import notification from '@/utils/NotificationManager';
 import { Loader } from '@/shared/Loader/Loader';
+import { InputFormType } from '@/types/InputFormType';
 
 export interface RegisterFormType {
     username: string;
@@ -25,7 +26,7 @@ export const RegisterForm = ({ closeModal }: { closeModal: () => void }) => {
         register,
         handleSubmit,
         formState: { errors }
-    } = useForm<RegisterFormType>({
+    } = useForm<InputFormType>({
         resolver: yupResolver(ValidateRegisterForm),
         mode: 'onSubmit'
     });
@@ -34,9 +35,8 @@ export const RegisterForm = ({ closeModal }: { closeModal: () => void }) => {
 
     const t = useTranslations('RegisterForm');
 
-    const onSubmit: SubmitHandler<RegisterFormType> = async (user) => {
+    const onSubmit: SubmitHandler<InputFormType> = async (user) => {
         const response = await data(user);
-        console.log('response', response);
         if (response.error) {
             const error = response.error as FetchBaseQueryError;
             if ('status' in error) {
