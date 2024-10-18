@@ -1,7 +1,7 @@
 import * as Yup from 'yup';
 
 export const ValidateLoginForm = Yup.object().shape({
-    email: Yup.string().email('email_invalid').required('message_required'),
+    email: Yup.string().email('Невірний формат email').required('message_required'),
     password: Yup.string()
         .trim()
         .min(8, 'message_minLength_8')

@@ -3,9 +3,10 @@ import { Box, Typography } from '@mui/material';
 
 import cls from './Input.module.scss';
 import { LoginFormType } from '@/components/LoginForm/LoginForm';
+import { useTranslations } from 'use-intl';
 
 export type InputType = {
-    name: 'email' | 'password';
+    name: 'email' | 'password' | 'username';
     type: string;
     label: string;
     placeholder: string;
@@ -15,6 +16,7 @@ export type InputType = {
 
 export const Input = (props: InputType) => {
     const { name, type, label, placeholder, error, register } = props;
+    const t = useTranslations('Input');
 
     return (
         <Box>
@@ -28,7 +30,11 @@ export const Input = (props: InputType) => {
                 placeholder={placeholder}
                 className={cls.input}
             />
-            {error && <Typography className={cls.error}>{error.message}</Typography>}
+            {error && (
+                <Typography fontSize={12} className={cls.error}>
+                    {t(error.message)}
+                </Typography>
+            )}
         </Box>
     );
 };

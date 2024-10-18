@@ -35,7 +35,8 @@
     "placeholder": "Введіть текст",
     "btn_submit": "Зберегти",
     "required": "Поле обов'язкове до заповнення",
-    "maxLengthError": "Максимальна довжина {max} символів"
+    "maxLengthError": "Максимальна довжина {max} символів",
+    "btn_clear": "Очистити"
   },
   "BlockChooseActs": {
     "title": "Список документів, які будуть відправлятися",
@@ -63,5 +64,32 @@
     "NO_DOCUMENT_CURRENT_DATE": "Сьогодні документи не відправлялися. Виберіть дату",
     "NO_DOCUMENT_FIND": "Документів не знідено. Спробуйте іншу дату",
     "THERE_IS_DOCUMENT": ""
+  },
+  "LoginForm": {
+    "title": "Увійдіть до свого акаунта",
+    "email": "Пошта",
+    "password": "Пароль",
+    "btn_submit": "Увійти",
+    "has_account": "Немає акаунта?",
+    "signUp": "Зареєструватися",
+    "error_message": "Невірна пошта або пароль",
+    "success_message": "Успішний вхід"
+  },
+  "RegisterForm": {
+    "title": "Реєстрація",
+    "username": "Ім'я",
+    "email": "Пошта",
+    "password": "Пароль",
+    "btn_submit": "Зареєструватися",
+    "error_message": "Користувач з такою поштою вже існує",
+    "success_message": "Успішний вхід",
+    "generic_error_message": "Сталася помилка під час реєстрації"
+  },
+  "Input": {
+    "email_invalid": "Невірний формат пошти",
+    "message_required": "Поле обов'язкове до заповнення",
+    "message_maxLength_100": "Максимальна довжина 100 символів",
+    "message_minLength_8": "Мінімальна довжина 8 символів",
+    "message_minLength_3": "Мінімальна довжина 3 символів"
   }
 }

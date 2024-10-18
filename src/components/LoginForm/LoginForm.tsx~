@@ -39,6 +39,7 @@ export const LoginForm = ({ closeModal }: { closeModal: () => void }) => {
 
     const handleModalOpen = () => {
         setIsOpen(true);
+        closeModal();
     };
 
     const onSubmit: SubmitHandler<LoginFormType> = async (user) => {

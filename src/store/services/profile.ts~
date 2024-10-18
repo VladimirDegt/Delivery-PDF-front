@@ -19,13 +19,6 @@ export const profileApi = createApi({
                 body: data
             })
         }),
-        register: builder.mutation({
-            query: (data): FetchArgs => ({
-                url: '/auth/register',
-                method: 'POST',
-                body: data
-            })
-        }),
         logout: builder.query({
             query: () => '/auth/logout',
             providesTags: ['Profile']
@@ -33,4 +26,4 @@ export const profileApi = createApi({
     })
 });
 
-export const { useLoginMutation, useLazyLogoutQuery, useRegisterMutation } = profileApi;
+export const { useLoginMutation, useLazyLogoutQuery } = profileApi;

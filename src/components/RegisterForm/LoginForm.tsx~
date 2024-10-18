@@ -1,0 +1,103 @@
+'use client';
+
+import { Box, Button, List, Typography } from '@mui/material';
+
+import { SubmitHandler, useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+
+import { Input } from '@/shared/Input/Input';
+import { InputPassword } from '@/shared/InputPassword/InputPassword';
+// import { useLoginMutation } from '@/store/services/profile';
+import { Loader } from '@/shared/Loader/Loader';
+import notification from '@/utils/NotificationManager';
+import { useTranslations } from 'use-intl';
+import {ValidateRegisterForm} from "@/components/RegisterForm/ValidateRegisterForm";
+
+export interface RegisterFormType {
+    username: string;
+    email: string;
+    password: string;
+}
+
+const MESSAGE_SUCCESS = 'Вхід успішний';
+const MESSAGE_ERROR = 'Невірний логін або пароль';
+
+export const RegisterForm = ({ closeModal }: { closeModal: () => void }) => {
+    const {
+        register,
+        handleSubmit,
+        formState: { errors }
+    } = useForm<RegisterFormType>({
+        resolver: yupResolver(ValidateRegisterForm),
+        mode: 'onSubmit'
+    });
+
+    // const [data, { isLoading }] = useRegisterMutation();
+
+    const t = useTranslations('RegisterForm');
+    const onSubmit: SubmitHandler<RegisterFormType> = async (user) => {
+        console.log('user', user);
+    };
+
+    // const onSubmit: SubmitHandler<RegisterFormType> = async (user) => {
+    //     const response = await data(user);
+    //     console.log('response', response);
+    //     if (response.data) {
+    //         closeModal();
+    //         notification.showSuccess(MESSAGE_SUCCESS);
+    //     }
+    //     if (response.error) notification.showError(MESSAGE_ERROR);
+    // };
+
+    // if (isLoading) return <Loader />;
+
+    return (
+        <form onSubmit={handleSubmit(onSubmit)} data-testid='loginForm'>
+            <Typography textAlign='center' variant='h6' mt={3} mb={2}>
+                {t('title')}
+            </Typography>
+            <List sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+                <li>
+                    <Input
+                        name='username'
+                        type='text'
+                        label={t('username')}
+                        placeholder={t('username')}
+                        error={errors.username}
+                        register={register}
+                    />
+                </li>
+                <li>
+                    <Input
+                        name='email'
+                        type='email'
+                        label={t('email')}
+                        placeholder={t('email')}
+                        error={errors.email}
+                        register={register}
+                    />
+                </li>
+                <li>
+                    <InputPassword
+                        name='password'
+                        label={t('password')}
+                        placeholder={t('password')}
+                        error={errors.password}
+                        register={register}
+                    />
+                </li>
+            </List>
+            <Button type='submit' sx={{ width: '100%' }}>
+                <Typography>{t('btn_submit')}</Typography>
+            </Button>
+            <Box display='flex' alignItems='center' justifyContent='center' mt={1}>
+                <Typography textAlign='center' fontSize={10}>
+                    {t('has_account')}
+                </Typography>
+                <Button type='button' sx={{ display: 'flex', alignItems: 'center' }}>
+                    <Typography fontSize={10}>{t('signUp')}</Typography>
+                </Button>
+            </Box>
+        </form>
+    );
+};

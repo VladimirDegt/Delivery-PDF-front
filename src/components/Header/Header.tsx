@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { LoginButton } from '@/components/LoginButton/LoginButton';
-import Logo from '../../../public/assets/favicon/logo.png';
+import Logo from '../../../public/assets/favicon/logo.svg';
 import cls from './Header.module.scss';
 import { NavigationBlock } from '@/components/NavigationBlock/NavigationBlock';
 import { LanguageButton } from '@/components/LanguageButton/LanguageButton';

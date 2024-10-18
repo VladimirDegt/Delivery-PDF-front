@@ -19,12 +19,8 @@ export default async function RootLayout({ children, params: { locale } }: RootL
             <head>
                 <meta name='viewport' content='width=device-width, initial-scale=1.0' />
                 <title>DeliveryPDF</title>
-                <link rel='icon' type='image/svg+xml' href='/assets/favicon/favicon.png' />
-                <link
-                    rel='apple-touch-icon'
-                    href='/assets/favicon/favicon.png'
-                    type='image/svg+xml'
-                />
+                <link rel='icon' type='image/svg+xml' href='/assets/favicon/logo.svg' />
+                <link rel='apple-touch-icon' href='/assets/favicon/logo.svg' type='image/svg+xml' />
             </head>
             <body>
                 <NextIntlClientProvider messages={messages}>
