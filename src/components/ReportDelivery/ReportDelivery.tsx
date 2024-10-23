@@ -10,8 +10,8 @@ import {
     TableContainer,
     TableHead,
     TableRow,
-    Typography,
-    TableSortLabel
+    TableSortLabel,
+    Typography
 } from '@mui/material';
 import { useTranslations } from 'use-intl';
 import { useState, useTransition } from 'react';
@@ -26,9 +26,14 @@ import { RangeDateForm } from '@/components/RangeDateForm/RangeDateForm';
 import { AppDispatch } from '@/store/store';
 import { Spinner } from '@/shared/Spinner/Spinner';
 
+interface IUser {
+    _id: string;
+    username: string;
+}
+
 interface ITable {
     _id: string;
-    user: string;
+    user: IUser;
     fileName: string;
     emailTo: string;
     result: string;
@@ -126,7 +131,7 @@ export const ReportDelivery = () => {
                                 >
                                     <TableCell align='left'>{index + 1}</TableCell>
                                     <TableCell align='left'>{formattedDate(createdAt)}</TableCell>
-                                    <TableCell align='left'>{user}</TableCell>
+                                    <TableCell align='left'>{user.username}</TableCell>
                                     <TableCell align='left'>{fileName}</TableCell>
                                     <TableCell align='left'>{emailTo}</TableCell>
                                     <TableCell align='left'>{result}</TableCell>

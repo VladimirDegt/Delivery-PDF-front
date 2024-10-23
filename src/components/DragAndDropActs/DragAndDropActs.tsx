@@ -14,6 +14,7 @@ import { useSendPDFMutation } from '@/store/services/deliveryPDF';
 import { Loader } from '@/shared/Loader/Loader';
 import { clearActs, getFiles, setActs } from '@/store/features/chooseActsSlice';
 import { getEmailTo } from '@/store/features/chooseEmailToSlice';
+import { getTextEmail } from '@/store/features/textEmailSlice';
 
 const extensionFile = 'pdf';
 
@@ -21,8 +22,9 @@ export const DragAndDropActs = () => {
     const [drag, setDrag] = useState(false);
     const token = useSelector(getToken);
     const files = useSelector(getFiles);
-    const [sendPDF, { isLoading }] = useSendPDFMutation();
     const emailTo = useSelector(getEmailTo);
+    const textEmail = useSelector(getTextEmail);
+    const [sendPDF, { isLoading }] = useSendPDFMutation();
     const dispatch = useDispatch();
     const t = useTranslations('DragAndDrop');
 
@@ -88,12 +90,14 @@ export const DragAndDropActs = () => {
             notification.showError(t('CHOOSE_FILE_MESSAGE_ERROR'));
             return;
         }
+
         const formData: FormData = new FormData();
 
         for (let i = 0; i < files.length; i++) {
             formData.append(`file №${i}`, files[i]);
         }
         formData.append('emailTo', emailTo);
+        formData.append('textEmail', textEmail);
 
         try {
             const response = await sendPDF(formData);

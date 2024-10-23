@@ -1,14 +1,9 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { documentApi } from '@/store/services/document';
 
-interface IUser {
-    _id: string;
-    username: string;
-}
-
 interface IDocument {
     _id: string;
-    user: IUser;
+    user: string;
     emailTo: string;
     emailFrom: string;
     fileName: string;
