@@ -1,6 +1,17 @@
+# DeliveryPDF
+[https://delivery-pdf-front.vercel.app](https://delivery-pdf-front.vercel.app/)
+
 ## Description
 
-[Next.js 14+](https://nextjs.org/) framework TypeScript starter project
+This web application was developed to streamline and significantly accelerate the process of sending completed work reports for a municipal company’s document department. Previously, employees manually copied and pasted over 500 customer emails each month, which was both time-consuming and prone to errors. This application simplifies the workflow by allowing users to simply drag and drop a document, after which the system automatically detects the customer’s email from the document and sends it accordingly.
+
+Additional features include:
+
+- Option to manually specify an email if none is detected within the document.
+- Real-time error notifications for issues such as invalid emails.
+- A detailed report of sent documents, complete with sorting and filtering options.
+
+This solution has improved efficiency by **8x**, saving valuable time and reducing errors in email delivery.
 
 ## Philosophy
 
@@ -65,7 +76,7 @@ that the project is correctly built and tested on every push or pull request to 
 ```bash
 .
 ├── README.md                       # README file
-├── .env.local                      # Environment variables
+├── .env.local.example              # Environment variables
 ├── .gitignore                      # GitHub ignore
 ├── .prettierignore                 # Prettier ignore
 ├── .prettierrc                     # Prettier config
@@ -75,11 +86,13 @@ that the project is correctly built and tested on every push or pull request to 
 ├── eslint.config.js                # ESLint config
 ├── .github                         
 │   ├── workflows                   # GitHub Actions CI Pipeline config
+├── messages                        # Local strategies folder
 ├── public                          # Public assets folder
 ├── src
 │   ├── app                         # Next JS App (App Router)
 │   ├── components                  # React components
 │   ├── hooks                       # React hooks
+│   ├── i18n                        # Internationalization
 │   ├── shared                      # Common components
 │   ├── store                       # State manager
 │   ├── styles                      # Styles folder
@@ -89,6 +102,29 @@ that the project is correctly built and tested on every push or pull request to 
 │   ├── e2e                         # E2E tests, also includes Monitoring as Code
 └── tsconfig.json                   # TypeScript configuration
 ```
+
+## Usage
+
+Your document can have any structure, content, and meet the following simple criteria:
+
+- must have a .pdf extension
+- must not exceed 5MB in size
+- must include an "e-mail" field
+
+Example of the document: <img alt="image" src="/public/assets/readme/document.png" />
+
+The document will be sent to the found email from my test email account, with a test subject.
+
+Example of the delivered email: <img alt="image" src="/public/assets/readme/info.JPG" />
+
+Please do not use the application for spam, as I do not want to create a new test account 🤝
+
+To use your email and SMTP settings, please contact me privately.
+
+## Backend
+Created with [Nest.js](https://github.com/nestjs/nest)
+
+GitHub - [https://github.com/degtyarevvladimirr/delivery-pdf-back](https://github.com/degtyarevvladimirr/delivery-pdf-back)
 
 ## Support
 
