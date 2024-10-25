@@ -124,7 +124,7 @@ To use your email and SMTP settings, please contact me privately.
 ## Backend
 Created with [Nest.js](https://github.com/nestjs/nest)
 
-GitHub - [https://github.com/degtyarevvladimirr/delivery-pdf-back](https://github.com/degtyarevvladimirr/delivery-pdf-back)
+GitHub - [https://github.com/VladimirDegt/Delivery-PDF-back](https://github.com/VladimirDegt/Delivery-PDF-back)
 
 ## Support
 
@@ -134,6 +134,7 @@ Next is an MIT-licensed open source project
 
 - Author - Volodymyr Dehtiarev
 - Email - [degtyarevvladimirr@gmail.com](mailto:degtyarevvladimirr@gmail.com)
+- WhatsApp - [WhatsApp](https://wa.me/380503250874)
 - LinkedIn - [LinkedIn profile](https://www.linkedin.com/in/volodymyr-dehtiarev/)
 
 ## License
